@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   ESTILOS BASE - OFFCORSS
+   Tipografía: Plus Jakarta Sans
+   ======================================== */
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0px;
+  }
+
+  body {
+    @apply bg-brand-50/30 text-gray-800;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0px;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-weight: inherit;
+    text-transform: none;
+    letter-spacing: 0px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-transform: none;
+    letter-spacing: 0px;
+  }
+}
+
+/* ========================================
+   COMPONENTES
+   ======================================== */
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2.5 rounded-xl
+      bg-brand-500 text-white font-semibold shadow-soft
+      transition-all hover:bg-brand-600 hover:shadow-float
+      active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2.5 rounded-xl
+      bg-white text-gray-700 font-medium border border-gray-200
+      transition-all hover:bg-brand-50 hover:border-brand-200
+      hover:text-brand-600 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-gray-100;
+  }
+}
+
+/* ========================================
+   BARRA DE DESPLAZAMIENTO
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFE500;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6cf00;
+}
+
+/* ========================================
+   ESTILOS DE IMPRESIÓN
+   ======================================== */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,22 @@
+# Secretos y variables de entorno
+.env
+.env.*
+!.env.example
+
+# Dependencias y compilaciones
+**/node_modules/
+**/dist/
+dist-ssr/
+
+# Registros y archivos temporales
+*.log
+*.backup
+*.local
+.DS_Store
+
+# Configuraciones locales
+.idea/
+.vscode/
+
+# Configuración local de herramientas
+project/.bolt/
